@@ -65,7 +65,7 @@ def sound_game_running():
 def sound_game_stop():
     pygame.mixer.music.stop()
     pygame.mixer.init()
-    pygame.mixer.music.load('sound/Tieng-xe-cap-cuu-chay-tren-duong-pho-www_tiengdong_com.mp3')
+    pygame.mixer.music.load('sound/gameoversound.mp3')
     pygame.mixer.music.play()
 
 sound_game_start()
