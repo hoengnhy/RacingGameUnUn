@@ -62,12 +62,6 @@ def sound_game_running():
     pygame.mixer.music.load('sound/Mission-Impossible.mp3')
     pygame.mixer.music.play(-1)
 
-def sound_game_score():
-    pygame.mixer.music.stop()
-    pygame.mixer.init()
-    pygame.mixer.music.load('sound/mixkit-game-treasure-coin-2038.wav')
-    pygame.mixer.music.play()
-
 def sound_game_stop():
     pygame.mixer.music.stop()
     pygame.mixer.init()
@@ -306,7 +300,6 @@ class Score:
 
     def update(self):
         self.score += 0.02
-        sound_game_score()
 
 def rectCollision(rect1, rect2):
     if (rect1[0] <= rect2[0] + rect2[2] and rect2[0] <= rect1[0] + rect1[2]
