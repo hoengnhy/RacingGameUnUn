@@ -53,20 +53,22 @@ def sound_game_start():
     pygame.mixer.music.stop()
     pygame.mixer.init()
     pygame.mixer.music.load('sound/Mission-Impossible.mp3')
-    if not pygame.mixer.music.get_busy():
-        pygame.mixer.music.play(-1)
+    pygame.mixer.music.set_volume(0.3)
+    pygame.mixer.music.play(-1)
 
 def sound_game_running():
     pygame.mixer.music.stop()
     pygame.mixer.init()
     pygame.mixer.music.load('sound/Mission-Impossible.mp3')
+    pygame.mixer.music.set_volume(0.3)
     pygame.mixer.music.play(-1)
 
 def sound_game_stop():
     pygame.mixer.music.stop()
     pygame.mixer.init()
     pygame.mixer.music.load('sound/gameoversound.mp3')
-    pygame.mixer.music.play()
+    pygame.mixer.music.set_volume(0.3)
+    pygame.mixer.music.play(-1)
 
 sound_game_start()
 
